@@ -1,0 +1,47 @@
+/* Create custom variables */
+:root{
+    --primaryBgColor: black;
+    --secondaryBgColor: gray;
+    --primaryFontColor: white;
+    --secFontColor: black;
+}
+/* Select all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* form */
+form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 5px auto;
+    background-color: darkcyan;
+    width: max-content;
+}
+form div {
+    margin: 5px auto;
+}
+form label {
+    display: inline-block;
+}
+form p {
+    color: white;
+}
+form input {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 20px;
+    border: 4px dotted blac;
+    box-shadow: 1vw 2vw 2vw rgba(10, 81, 35, 0.6);
+}
+
+form button {
+    padding: 5px 5vw;
+    box-shadow: 1vw 1vw 1vw rgba(11, 67, 17, 0.8);
+    line-height: 20px;
+    font-weight: 800;
+    border-radius: 20px;
+}
