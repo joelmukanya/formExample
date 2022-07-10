@@ -26,9 +26,16 @@ form div {
 form label {
     display: inline-block;
 }
-form p {
+form p, span{
     color: white;
 }
+form h5 {
+    color: white;
+    margin: 10px 0;
+}
+form select {
+    padding: 0 5px;
+} 
 form input {
     display: block;
     text-align: center;
@@ -44,4 +51,12 @@ form button {
     line-height: 20px;
     font-weight: 800;
     border-radius: 20px;
+}
+/* inline wrapper */
+.inline-wrapper {
+    display: flex;
+    margin: 10px;
+}
+.inline-wrapper  span{
+    margin-left: 5px;
 }

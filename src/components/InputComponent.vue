@@ -7,6 +7,37 @@
         <p>{{p.value}}</p>
       </div>
       <div>
+        <span>Position: </span>
+        <select v-model="jobTitle">
+          <option value="lecturer">Lecturer</option>
+          <option value="developer">Developer</option>
+          <option value="Admin">Admin</option>          
+        </select>
+          <p style="margin: 5px 0;">Your Job title is <strong>{{jobTitle}}</strong></p>
+      </div>
+      <div>
+        <h2>Select your favor fruit(s)</h2>
+        <div class="inline-wrapper">
+          <input type="checkbox" value="Mango" v-model="fruits">
+          <span>Mango</span>
+        </div>
+        <div class="inline-wrapper">
+          <input type="checkbox" value="Orange" v-model="fruits">
+          <span>Orange</span>
+        </div>
+        <div class="inline-wrapper">
+          <input type="checkbox" value="Banana" v-model="fruits">
+          <span>Banana</span>
+        </div>
+        <div class="inline-wrapper">
+          <input type="checkbox" value="Pineapple" v-model="fruits">
+          <span>Pineapple</span>
+        </div>
+        <p v-for="(fruit, index) in fruits" :key="index">
+          <span>{{fruit}}</span>
+        </p>
+      </div>
+      <div>
         <button>Submit</button>
       </div>
     </form>
@@ -17,6 +48,8 @@
 export default {
   data() {
     return {
+      jobTitle: 'lecturer',
+      fruits: [],
       person: [
         {
           id: 1,
