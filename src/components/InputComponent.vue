@@ -1,7 +1,7 @@
 <template>
   <fieldset>
     <legend>Form Details</legend>
-    <form>
+    <form @submit.prevent="readyToSubmit">
       <div v-for="p in person" :key="p.id">
         <input :type="p.type" v-model="p.value" :placeholder="p.placeholder"/>
         <p>{{p.value}}</p>
@@ -38,6 +38,11 @@
         </p>
       </div>
       <div>
+        <p>
+          {{ result }}
+        </p>
+      </div>
+      <div>
         <button>Submit</button>
       </div>
     </form>
@@ -50,6 +55,7 @@ export default {
     return {
       jobTitle: 'lecturer',
       fruits: [],
+      result: '',
       person: [
         {
           id: 1,
@@ -70,6 +76,11 @@ export default {
           placeholder: 'Enter your email'
         }
       ]
+    }
+  },
+  methods: {
+    readyToSubmit() {
+      this.result = "Form was submitted";
     }
   }
 }
